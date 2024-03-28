@@ -200,3 +200,12 @@ MonoBehaviour:
   movePower: 10
   KickBoardMovePower: 20
   jumpPower: 15
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 53a88ffb-ec42-451e-8158-9cc63b987e43
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
