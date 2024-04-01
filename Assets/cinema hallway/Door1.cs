@@ -4,14 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Door1 : MonoBehaviour
-{
-    // Start is called before the first frame update
+{   
+    public GameObject popUpWindow;
+
     void Start()
-    {
-        
+    {   
+        // disable at the beginning
+        if (popUpWindow != null) {
+            popUpWindow.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         // check if door collider clicked
@@ -22,9 +25,37 @@ public class Door1 : MonoBehaviour
             // check if the click hits the clickable area
             if (GetComponent<Collider2D>().OverlapPoint(mousePos))
             {
-                // click and load the hall 1
-                SceneManager.LoadScene("hall1");
+                // click on the door, show pop up window
+                ShowPopUpWindow();
             }
+        }
+    }
+
+    public void ShowPopUpWindow() {
+        
+        if (popUpWindow != null)
+        {
+            popUpWindow.SetActive(true);
+        }
+    }
+
+    // Button Yes
+    public void OnYesButtonClick() {
+        
+        //load scene
+        SceneManager.LoadScene("hall1");
+    }
+
+    public void OnNoButtonClick() {
+        
+        HidePopUpWindow();
+    }
+
+    public void HidePopUpWindow() {
+        
+        if (popUpWindow != null) {
+
+            popUpWindow.SetActive(false);
         }
     }
 }
