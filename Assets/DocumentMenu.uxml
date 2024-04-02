@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 0; align-items: center; flex-direction: row; background-color: rgb(67, 59, 59); width: 80%; height: 80%; left: 10%; top: 10%; right: 10%; bottom: 10%;">
+        <ui:VisualElement name="Inventory" style="flex-grow: 1; width: 20%; height: 100%; max-width: 20%;">
+            <ui:VisualElement name="TitleVisualElem" style="flex-grow: 0; width: 100%; height: 10%;">
+                <ui:Label tabindex="-1" text="Collected documents" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" />
+            </ui:VisualElement>
+            <ui:ListView name="InventoryListView" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: auto; align-self: flex-end; height: 100%; flex-direction: column;">
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DocumentContent" style="height: 10%;" />
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DocumentName" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 0; width: 5%; height: auto; max-width: 5%; background-image: none; -unity-background-scale-mode: scale-to-fit; top: 0; position: relative; justify-content: flex-start; align-self: flex-start;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="closeButton" style="background-image: url(&quot;project://database/Assets/2D%20Casual%20UI/Sprite/GUI.png?fileID=21300120&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_67&quot;); -unity-background-scale-mode: scale-to-fit; background-color: rgba(56, 56, 56, 0);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

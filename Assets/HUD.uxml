@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="DocumentButton" style="flex-grow: 0; width: 10%; height: 15%; background-image: url(&quot;project://database/Assets/2D%20Casual%20UI/Sprite/GUI.png?fileID=21300014&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_7&quot;); align-self: flex-end; -unity-background-scale-mode: scale-to-fit;">
-        <ui:VisualElement name="Icon" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/2D%20Casual%20UI/Sprite/GUI.png?fileID=21300072&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_36&quot;); -unity-background-scale-mode: scale-to-fit; width: 60%; height: 60%; left: 20%; top: 20%;" />
-    </ui:VisualElement>
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="InventoryButton" style="background-image: url(&quot;project://database/Assets/2D%20Casual%20UI/Sprite/GUI.png?fileID=21300014&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_7&quot;); -unity-background-scale-mode: scale-to-fit; background-color: rgba(188, 188, 188, 0); width: 10%; height: 15%; align-self: flex-end;">
+        <ui:VisualElement name="Icon" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/2D%20Casual%20UI/Sprite/GUI.png?fileID=21300072&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_36&quot;); -unity-background-scale-mode: scale-to-fit; width: 80%; height: 80%; left: 10%; top: 10%;" />
+    </ui:Button>
 </ui:UXML>
