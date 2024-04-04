@@ -1,14 +1,15 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 0; align-items: center; flex-direction: row; background-color: rgb(67, 59, 59); width: 80%; height: 80%; left: 10%; top: 10%; right: 10%; bottom: 10%;">
-        <ui:VisualElement name="Inventory" style="flex-grow: 1; width: 20%; height: 100%; max-width: 20%;">
-            <ui:VisualElement name="TitleVisualElem" style="flex-grow: 0; width: 100%; height: 10%;">
-                <ui:Label tabindex="-1" text="Collected documents" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" />
+    <Style src="project://database/Assets/ListViewItem.uss?fileID=7433441132597879392&amp;guid=be52ca96c9b37bc4c92001b652ba554c&amp;type=3#ListViewItem" />
+    <ui:VisualElement style="flex-grow: 0; align-items: center; flex-direction: row; background-color: rgba(45, 45, 45, 0); width: 80%; height: 80%; left: 10%; top: 10%; right: 10%; bottom: 10%; background-image: url(&quot;project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Alternative_Colors_3.png?fileID=-3566595149302162515&amp;guid=0bfe7a2d4a8de314bbf0f670d78a6cd2&amp;type=3#Steampunk_UI_Alternative_Colors_3_2&quot;);">
+        <ui:VisualElement name="Inventory" style="flex-grow: 1; width: 20%; height: 100%; max-width: 20%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 3%; padding-right: 0; padding-bottom: 3%; padding-left: 3%;">
+            <ui:VisualElement name="TitleVisualElem" style="flex-grow: 0; width: 100%; height: 10%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                <ui:Label tabindex="-1" text="Collected documents" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CollectedDocs" style="font-size: 14px; color: rgb(0, 0, 0); white-space: normal;" />
             </ui:VisualElement>
-            <ui:ListView name="InventoryListView" style="flex-grow: 1;" />
+            <ui:ListView name="InventoryListView" class="list-view" style="flex-grow: 1;" />
         </ui:VisualElement>
-        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: auto; align-self: flex-end; height: 100%; flex-direction: column;">
-            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DocumentContent" style="height: 10%;" />
-            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DocumentName" style="flex-grow: 1;" />
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: auto; align-self: flex-end; height: 100%; flex-direction: column; padding-top: 3%; padding-right: 0; padding-bottom: 3%; padding-left: 0;">
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="height: 10%; color: rgb(0, 0, 0);" />
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Content" style="flex-grow: 1; color: rgb(0, 0, 0);" />
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 0; width: 5%; height: auto; max-width: 5%; background-image: none; -unity-background-scale-mode: scale-to-fit; top: 0; position: relative; justify-content: flex-start; align-self: flex-start;">
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="closeButton" style="background-image: url(&quot;project://database/Assets/2D%20Casual%20UI/Sprite/GUI.png?fileID=21300120&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_67&quot;); -unity-background-scale-mode: scale-to-fit; background-color: rgba(56, 56, 56, 0);" />

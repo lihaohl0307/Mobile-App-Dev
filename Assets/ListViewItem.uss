@@ -1,0 +1,11 @@
+.list-view-item {
+    background-image: url("project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Dialogue_3.png?fileID=5185045578303202313&guid=44a8b76b70d48db4aa2dcac3eb64eb88&type=3#Steampunk_UI_Dialogue_3_3");
+    -unity-background-scale-mode: stretch-to-fill;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.list-view {
+}
