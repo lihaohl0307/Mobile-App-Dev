@@ -21,6 +21,8 @@ namespace ClearSky
 
         public InputAction moveAction;
 
+        protected Joystick joystick;
+
 
         // Start is called before the first frame update
         void Start()
@@ -28,6 +30,7 @@ namespace ClearSky
             rb = GetComponent<Rigidbody2D>();
             anim = GetComponent<Animator>();
             moveAction.Enable();
+            joystick = FindObjectOfType<Joystick>(joystick);
         }
 
         public void OnEnable()
@@ -68,31 +71,32 @@ namespace ClearSky
 
         }
 
-        void Run()
+    void Run()
+    {
+        if (!isKickboard)
         {
-            if (!isKickboard)
-            {
-                anim.SetBool("isRun", false);
+            anim.SetBool("isRun", false);
+            Vector2 move = new Vector2(joystick.Horizontal * 2, 0);
 
-                Vector2 move = moveAction.ReadValue<Vector2>();
-                Debug.Log(move);
-                if (move != Vector2.zero)
-                {
-                    anim.SetBool("isRun", true);
-                }
-                if (move.x < 0)
-                {
-                    direction = -1;
-                }
-                if (move.x > 0)
-                {
-                    direction = 1;
-                }
-                transform.localScale = new Vector3(direction, 1, 1);
-                rb.MovePosition(rb.position + move * movePower * Time.deltaTime);
-                Debug.Log(transform.position);
+            if (move != Vector2.zero)
+            {
+                anim.SetBool("isRun", true);
             }
+
+            if (move.x < 0)
+            {
+                direction = -1;
+            }
+            else if (move.x > 0)
+            {
+                direction = 1;
+            }
+
+            transform.localScale = new Vector3(direction, 1, 1);
+            rb.MovePosition(rb.position + move * movePower * Time.deltaTime);
         }
+    }
+
         void Jump()
         {
             return;
