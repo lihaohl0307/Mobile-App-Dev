@@ -195,6 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577567726}
   - component: {fileID: 577567727}
+  - component: {fileID: 577567728}
   m_Layer: 0
   m_Name: bg1
   m_TagString: Untagged
@@ -269,6 +270,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &577567728
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577567725}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000038146973, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 17.92, y: 10.24}
+    newSize: {x: 70, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70.20489, y: 10.24}
+  m_EdgeRadius: 0
 --- !u!1 &662551941
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +953,7 @@ Transform:
   m_GameObject: {fileID: 1434709171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4041385, y: -0.4164168, z: 0.02341318}
+  m_LocalPosition: {x: 2.36, y: -0.2, z: 0.02341318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1151,12 +1197,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653895103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26, y: 0.3, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.43, y: 4.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1678858745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1678858740
 PrefabInstance:
@@ -1212,7 +1258,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2053518115102101881, guid: 521aebf732701414da1c25c63cb8390b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1653895106}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2053518115102101880, guid: 521aebf732701414da1c25c63cb8390b, type: 3}
       insertIndex: -1
@@ -1224,6 +1273,11 @@ PrefabInstance:
 --- !u!1 &1678858741 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2053518115102101880, guid: 521aebf732701414da1c25c63cb8390b, type: 3}
+  m_PrefabInstance: {fileID: 1678858740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1678858745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2053518115102101881, guid: 521aebf732701414da1c25c63cb8390b, type: 3}
   m_PrefabInstance: {fileID: 1678858740}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1678858746
@@ -1241,6 +1295,9 @@ MonoBehaviour:
   movePower: 50
   KickBoardMovePower: 15
   jumpPower: 20
+  movementBounds: {fileID: 577567728}
+  minCameraPosition: {x: -23, y: 0.5}
+  maxCameraPosition: {x: 26.5, y: 0.5}
   moveAction:
     m_Name: Move
     m_Type: 0
@@ -1481,8 +1538,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046213905}
-  - component: {fileID: 2046213907}
   - component: {fileID: 2046213906}
+  - component: {fileID: 2046213907}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -1670,7 +1727,6 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1653895106}
   - {fileID: 1678858740}
   - {fileID: 1434709172}
   - {fileID: 662551942}

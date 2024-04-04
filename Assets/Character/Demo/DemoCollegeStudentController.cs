@@ -11,6 +11,10 @@ namespace ClearSky
         public float KickBoardMovePower = 15f;
         public float jumpPower = 20f; //Set Gravity Scale in Rigidbody2D Component to 5
 
+        public Collider2D movementBounds;
+        public Vector2 minCameraPosition;
+        public Vector2 maxCameraPosition;
+
         private Rigidbody2D rb;
         private Animator anim;
         Vector3 movement;
@@ -22,6 +26,20 @@ namespace ClearSky
         public InputAction moveAction;
 
         protected Joystick joystick;
+
+        void LateUpdate()
+        {
+            if (alive)
+            {
+                Vector3 targetPosition = transform.position;
+                targetPosition.z = Camera.main.transform.position.z;
+
+                float clampedX = Mathf.Clamp(targetPosition.x, minCameraPosition.x, maxCameraPosition.x);
+                float clampedY = Mathf.Clamp(targetPosition.y, minCameraPosition.y, maxCameraPosition.y);
+
+                Camera.main.transform.position = new Vector3(clampedX, clampedY, targetPosition.z);
+            }
+        }
 
 
         // Start is called before the first frame update
@@ -93,7 +111,8 @@ namespace ClearSky
             }
 
             transform.localScale = new Vector3(direction, 1, 1);
-            rb.MovePosition(rb.position + move * movePower * Time.deltaTime);
+            Vector2 clampedPosition = movementBounds.ClosestPoint(rb.position + move * movePower * Time.deltaTime);
+            rb.MovePosition(clampedPosition);
         }
     }
 
