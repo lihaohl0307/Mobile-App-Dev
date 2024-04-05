@@ -23,7 +23,9 @@ public class ClickPoster1 : MonoBehaviour
             if (GetComponent<Collider2D>().OverlapPoint(mousePos))
             {
                 ///load scene
-                SceneManager.LoadScene("Poster1");
+                // SceneManager.LoadScene("Poster1");
+                Debug.Log("Clicked poster");
+                DocumentStore.documents.Add(new Document("Note written on the hallway poster", "Don't go to the screening room next to this poster!!!\nIt almost cost my life to get out of there!"));
             }
         }
     }

@@ -11,7 +11,6 @@ public class DocumentInventoryController : MonoBehaviour
 
     private Button closeButton;
     private ListView inventoryList;
-    private List<Document> mockDocuments;
     private Label title;
     private Label content;
 
@@ -31,19 +30,10 @@ public class DocumentInventoryController : MonoBehaviour
             title = root.Q<Label>("Title");
             content = root.Q<Label>("Content"); 
 
-            mockDocuments = new List<Document>()
-            {
-                new Document("Sample Document 1", "Content of the first document"),
-                new Document("Technical Report", "This report details the project findings..."),
-                new Document("User Manual", "Instructions on how to use the software effectively."),
-            };
-
             closeButton.RegisterCallback<ClickEvent>(ev => ui.rootVisualElement.style.display = DisplayStyle.None);
             inventoryList.makeItem = MakeItem;
             inventoryList.bindItem = BindItem;
-            inventoryList.itemsSource = mockDocuments;
-            inventoryList.RefreshItems();
-            inventoryList.Rebuild();
+            inventoryList.itemsSource = DocumentStore.documents;
         }
     }
 
@@ -58,6 +48,7 @@ public class DocumentInventoryController : MonoBehaviour
     {
         var button = new Button();
         button.AddToClassList("list-view-item");
+        button.style.flexWrap = Wrap.Wrap;
 
         return button;
     }
@@ -65,7 +56,7 @@ public class DocumentInventoryController : MonoBehaviour
     private void BindItem(VisualElement element, int index)
     {
         var button = element as Button;
-        var document = mockDocuments[index];
+        var document = DocumentStore.documents[index];
 
         button.text = document.title;
         button.clicked += () =>
