@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Door1 : MonoBehaviour
 {   
     public GameObject popUpWindow;
+    private string passcode = "1234";
+    private InputField input;
 
     void Start()
-    {   
+    {
         // disable at the beginning
         if (popUpWindow != null) {
             popUpWindow.SetActive(false);
+            input = popUpWindow.GetComponentInChildren<InputField>();
         }
     }
 
@@ -43,7 +47,14 @@ public class Door1 : MonoBehaviour
     public void OnYesButtonClick() {
         
         //load scene
-        SceneManager.LoadScene("hall1");
+        Debug.Log("Input: " + input.text.ToString());
+        if (input.text.Equals(passcode))
+        {
+            SceneManager.LoadScene("hall1");
+        } else
+        {
+            input.text = "";
+        }
     }
 
     public void OnNoButtonClick() {

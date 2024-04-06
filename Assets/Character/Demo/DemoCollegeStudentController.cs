@@ -61,11 +61,11 @@ namespace ClearSky
             Restart();
             if (alive)
             {
-                Hurt();
-                Die();
-                Attack();
+                //Hurt();
+                //Die();
+                //Attack();
                 Jump();
-                KickBoard();
+                //KickBoard();
                 Run();
 
             }
