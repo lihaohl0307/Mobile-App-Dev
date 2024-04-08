@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Door1 : MonoBehaviour
+public class Door1 : InteractableItem
 {   
     public GameObject popUpWindow;
     private string passcode = "1234";
     private InputField input;
 
-    void Start()
+    new void Start()
     {
+        base.Start();
         // disable at the beginning
         if (popUpWindow != null) {
             popUpWindow.SetActive(false);
@@ -19,8 +20,9 @@ public class Door1 : MonoBehaviour
         }
     }
 
-    void Update()
+    new void Update()
     {
+        base.Update();
         // check if door collider clicked
         if (Input.GetMouseButtonDown(0))
         {
