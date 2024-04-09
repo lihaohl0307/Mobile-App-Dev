@@ -8,7 +8,7 @@ public class InteractableItem : MonoBehaviour
 {
     private Transform player;
     private GameObject interactableHint;
-    private float distanceThreshold = 0f;
+    private float distanceThreshold = 1f;
     private float halfWidth;
 
     public void Start()
@@ -33,6 +33,7 @@ public class InteractableItem : MonoBehaviour
     public void Update()
     {
         float distance = Mathf.Abs(transform.position.x + halfWidth - player.position.x - 1);
+        Debug.Log("Distance: " + distance);
 
         if (distance <= distanceThreshold)
         {
@@ -48,6 +49,15 @@ public class InteractableItem : MonoBehaviour
         else
         {
             interactableHint.SetActive(false);
+            if (interactableHint != null)
+            {
+                Debug.Log("not active");
+            }
+            else
+            {
+                Debug.LogError("interactableHint is null!");
+            }
+
         }
     }
 }
