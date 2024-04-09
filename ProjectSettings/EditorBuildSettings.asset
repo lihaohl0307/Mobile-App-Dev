@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/hall1.unity
     guid: 2e2d466b083fe4930af565b999028c22
   - enabled: 1
-    path: Assets/cinema hallway/Poster1.unity
+    path: Assets/Scenes/Poster2.unity
     guid: 41445bcdc45df48fe8baf98aa647cc27
   m_configObjects: {}
