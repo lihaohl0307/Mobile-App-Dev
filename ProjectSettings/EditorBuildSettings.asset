@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainMenu.unity
     guid: b8215bd94f43eff44b58ab99eafc0e21
+  - enabled: 1
+    path: Assets/Scenes/cinema hallway.unity
+    guid: 45a66a7e6b72a4a159dea1ef0a12a4c0
+  - enabled: 1
+    path: Assets/Scenes/hall1.unity
+    guid: 2e2d466b083fe4930af565b999028c22
   - enabled: 0
     path: Assets/Scenes/Poster2.unity
     guid: 41445bcdc45df48fe8baf98aa647cc27
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 1
-    path: Assets/Scenes/cinema hallway.unity
-    guid: 45a66a7e6b72a4a159dea1ef0a12a4c0
-  - enabled: 0
-    path: Assets/Scenes/hall1.unity
-    guid: 2e2d466b083fe4930af565b999028c22
   m_configObjects: {}
