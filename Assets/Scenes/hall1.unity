@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1659d8f40431048a82ff8d468a2cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePower: 50
+  movePower: 100
   KickBoardMovePower: 15
   jumpPower: 20
   movementBounds: {fileID: 954002947}
