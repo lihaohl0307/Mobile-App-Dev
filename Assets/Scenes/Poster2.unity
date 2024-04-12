@@ -123,37 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &161470552
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 161470553}
-  m_Layer: 0
-  m_Name: PaperCurlManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &161470553
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161470552}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0039000511, y: 0.31710005, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &464108790
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +385,8 @@ GameObject:
   m_Component:
   - component: {fileID: 923024677}
   - component: {fileID: 923024676}
+  - component: {fileID: 923024678}
+  - component: {fileID: 923024679}
   m_Layer: 0
   m_Name: password_poster2
   m_TagString: Untagged
@@ -464,7 +435,7 @@ SpriteRenderer:
   m_SortingLayerID: 1857024979
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1564becef665e4aea965b9292e66d70c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1d9b127d7c074872951a138ca15215a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -483,13 +454,70 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923024675}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.019776955, y: 0.013899605, z: -0.83012605, w: 0.55705166}
-  m_LocalPosition: {x: 1.28, y: -1.86, z: 0.13}
-  m_LocalScale: {x: 0.18654856, y: 0.18654856, z: 0.18654856}
+  m_LocalRotation: {x: 0.019258123, y: 0.014609974, z: 0.230019, w: 0.9728859}
+  m_LocalPosition: {x: 1.55, y: -1.83, z: 0.11}
+  m_LocalScale: {x: 0.11771214, y: 0.12101405, z: 0.18654856}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 2.586, y: -0.995, z: -112.296}
+  m_LocalEulerAnglesHint: {x: 1.762, y: 2.138, z: 26.637}
+--- !u!114 &923024678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923024675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14c151bda8aa485fb9b39d550356fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &923024679
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923024675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.12961245}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 6.08, y: 4.11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.24, y: 5.839198}
+  m_EdgeRadius: 0
 --- !u!1 &978614865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,7 +1132,6 @@ SceneRoots:
   - {fileID: 464108792}
   - {fileID: 1314723860}
   - {fileID: 978614869}
-  - {fileID: 161470553}
   - {fileID: 923024677}
   - {fileID: 1020357064}
   - {fileID: 1721734009}
