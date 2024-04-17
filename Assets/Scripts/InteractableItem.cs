@@ -33,12 +33,10 @@ public class InteractableItem : MonoBehaviour
     public void Update()
     {
         float distance = Mathf.Abs(transform.position.x + halfWidth - player.position.x - 1);
-        Debug.Log("Distance: " + distance);
 
         if (distance <= distanceThreshold)
         {
             // Show the icon above the collectible on screen
-            Debug.Log(transform.position);
             Vector2 pos = transform.position;
             pos.x += halfWidth;
             pos.y += GetComponent<Collider2D>().bounds.size.y;
@@ -49,15 +47,6 @@ public class InteractableItem : MonoBehaviour
         else
         {
             interactableHint.SetActive(false);
-            if (interactableHint != null)
-            {
-                Debug.Log("not active");
-            }
-            else
-            {
-                Debug.LogError("interactableHint is null!");
-            }
-
         }
     }
 }

@@ -119,7 +119,7 @@ namespace ClearSky
         void Jump()
         {
             return;
-            if ((Input.GetButtonDown("Jump") || Input.GetAxisRaw("Vertical") > 0)
+            if ((Input.GetButtonDown("Jump") || joystick.Vertical > 0.8)
             && !anim.GetBool("isJump"))
             {
                 isJumping = true;
@@ -129,6 +129,7 @@ namespace ClearSky
             {
                 return;
             }
+            Debug.Log("Applying jumping force");
 
             rb.velocity = Vector2.zero;
 
@@ -155,15 +156,12 @@ namespace ClearSky
                     rb.AddForce(new Vector2(5f, 1f), ForceMode2D.Impulse);
             }
         }
-        void Die()
+        public void Die()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
                 isKickboard = false;
                 anim.SetBool("isKickBoard", false);
                 anim.SetTrigger("die");
                 alive = false;
-            }
         }
         void Restart()
         {
