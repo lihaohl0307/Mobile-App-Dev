@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ClickPoster1 : InteractableItem
 {
+    bool used = false;
     // Start is called before the first frame update
     new void Start()
     {
@@ -22,8 +23,9 @@ public class ClickPoster1 : InteractableItem
             // get click position
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // check if the click hits the clickable area
-            if (GetComponent<Collider2D>().OverlapPoint(mousePos))
+            if (GetComponent<Collider2D>().OverlapPoint(mousePos) && used == false)
             {
+                used = true;
                 Debug.Log("Clicked poster");
                 DocumentStore.documents.Add(new Document("Note written on the hallway poster", "Don't go to the screening room next to this poster!!!\nIt almost cost my life to get out of there!"));
             }
