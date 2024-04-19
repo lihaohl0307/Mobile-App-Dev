@@ -23,7 +23,8 @@ public class InteractableItem : MonoBehaviour
         {
             Debug.LogError("Indicator image not assigned to Collectible script!");
         }
-        interactableHint.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        interactableHint.transform.SetParent(GameObject.Find("HintCanvas").transform, false);
+        interactableHint.layer = 0;
         halfWidth = GetComponent<Collider2D>().bounds.size.x / 4f;
 
         interactableHint.SetActive(false);
