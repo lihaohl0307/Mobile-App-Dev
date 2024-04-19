@@ -6,6 +6,12 @@ public class Document
 {
     public string title;
     public string content;
+    private string v;
+
+    public Document(string v)
+    {
+        this.v = v;
+    }
 
     public Document(string title, string content)
     {
