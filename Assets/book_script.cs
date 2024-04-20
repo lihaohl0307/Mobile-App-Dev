@@ -24,6 +24,7 @@ public class book_script : InteractableItem
             {
                 used = true;
                 Debug.Log("Clicked poster");
+                base.showToast();
                 DocumentStore.documents.Add(new Document("Notebook in the theater", "Shhh... leave while they're still watching the movie!\nOtherwise, they'll come looking for you when the movie ends!\nThe theater exit is on the right.\nThey like to sit in odd-numbered seats.\nDon't block their view for too long!"));
             }
         }

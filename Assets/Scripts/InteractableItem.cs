@@ -49,4 +49,19 @@ public class InteractableItem : MonoBehaviour
             interactableHint.SetActive(false);
         }
     }
+
+    public void showToast()
+    {
+        
+        StartCoroutine(showToastAsync());
+    }
+
+    IEnumerator showToastAsync()
+    {
+        GameObject res = Resources.Load<GameObject>("DocumentToast");
+        var toast = Instantiate(res);
+        toast.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        yield return new WaitForSeconds(3);
+        toast.gameObject.SetActive(false);
+    }
 }

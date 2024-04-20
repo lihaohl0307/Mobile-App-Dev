@@ -27,6 +27,7 @@ public class ClickPoster1 : InteractableItem
             {
                 used = true;
                 Debug.Log("Clicked poster");
+                base.showToast();
                 DocumentStore.documents.Add(new Document("Note written on the hallway poster", "Don't go to the screening room next to this poster!!!\nIt almost cost my life to get out of there!"));
             }
         }

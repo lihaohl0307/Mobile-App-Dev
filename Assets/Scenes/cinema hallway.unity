@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 465663179}
+  hud: {fileID: 1759959314}
 --- !u!114 &465663179
 MonoBehaviour:
   m_ObjectHideFlags: 0
