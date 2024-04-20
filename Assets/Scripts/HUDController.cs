@@ -23,6 +23,7 @@ public class HUDController : MonoBehaviour
         if (menuUIObj != null)
         {
             menuUIObj.GetComponent<DocumentInventoryController>().Display();
+            GetComponent<UIDocument>().rootVisualElement.style.display = DisplayStyle.None;
         }
     }
 }

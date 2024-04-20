@@ -8,6 +8,7 @@ public class DocumentInventoryController : MonoBehaviour
 {
     [SerializeField]
     private UIDocument ui;
+    public UIDocument hud;
 
     private Button closeButton;
     private ListView inventoryList;
@@ -30,7 +31,11 @@ public class DocumentInventoryController : MonoBehaviour
             title = root.Q<Label>("Title");
             content = root.Q<Label>("Content"); 
 
-            closeButton.RegisterCallback<ClickEvent>(ev => ui.rootVisualElement.style.display = DisplayStyle.None);
+            closeButton.RegisterCallback<ClickEvent>(ev =>
+            {
+                ui.rootVisualElement.style.display = DisplayStyle.None;
+                hud.rootVisualElement.style.display = DisplayStyle.Flex;
+            });
             inventoryList.makeItem = MakeItem;
             inventoryList.bindItem = BindItem;
             inventoryList.itemsSource = DocumentStore.documents;
