@@ -128,7 +128,7 @@ public class MiniGame1Manager : MonoBehaviour
 
    public (int, int) findFourZeroCel(int rIdx, int cIdx)
     {
-        List<(int, int)> dirs = new List<(int, int)>(        )
+        List<(int, int)> dirs = new List<(int, int)>()
         {
             (rIdx + 1, cIdx),
             (rIdx - 1, cIdx),
