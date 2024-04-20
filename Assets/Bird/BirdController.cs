@@ -25,11 +25,6 @@ public class BirdController : MonoBehaviour
         {
             GameOver();
         }
-
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Jump();
-        }
         
         if (Input.GetMouseButtonDown(0))
         {
@@ -56,7 +51,6 @@ public class BirdController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pipe"))
         {
-            // Game over
             GameOver();
         }
     }
