@@ -16,6 +16,6 @@ public class ScoreManager : MonoBehaviour
 
     public void OnRestartButtonClick() // Connect this function to your button's onClick event in the inspector
     {
-        SceneManager.LoadScene("cinema hallway");
+        SceneManager.LoadScene("hall1");
     }
 }
