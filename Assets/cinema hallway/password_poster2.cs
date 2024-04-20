@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class password_poster2 : MonoBehaviour
-{
+{   
+    bool clicked = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,9 @@ public class password_poster2 : MonoBehaviour
             // get click position
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // check if the click hits the clickable area
-            if (GetComponent<Collider2D>().OverlapPoint(mousePos))
-            {
+            if (GetComponent<Collider2D>().OverlapPoint(mousePos) && clicked == false)
+            {   
+                clicked = true;
                 Debug.Log("Clicked poster2");
                 DocumentStore.documents.Add(new Document("Numbers written on the ticket", "Password: 1234"));
             }
