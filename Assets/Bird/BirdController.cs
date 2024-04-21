@@ -10,8 +10,6 @@ public class BirdController : MonoBehaviour
     public float upperLimit = 5f; // Set this to the top of your screen
     public float lowerLimit = -5f; // Set this to the bottom of your screen
 
-    public AudioSource jumpSFX;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,7 +33,6 @@ public class BirdController : MonoBehaviour
     private void Jump()
     {
         rb.velocity = Vector2.up * jumpForce;
-        jumpSFX.Play();
     }
 
 
