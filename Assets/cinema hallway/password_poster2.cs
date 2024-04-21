@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class password_poster2 : MonoBehaviour
+public class password_poster2 : InteractableItem
 {   
     bool clicked = false;
     // Start is called before the first frame update
@@ -13,7 +13,7 @@ public class password_poster2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         // check if poster1 collider clicked
         if (Input.GetMouseButtonDown(0))
         {
@@ -25,6 +25,7 @@ public class password_poster2 : MonoBehaviour
                 clicked = true;
                 Debug.Log("Clicked poster2");
                 DocumentStore.documents.Add(new Document("Numbers written on the ticket", "Password: 1234"));
+                base.showToast();
             }
         }
     }
